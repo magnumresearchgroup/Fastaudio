@@ -2,7 +2,7 @@
 __set_seed: !!python/object/apply:torch.manual_seed [!ref <seed>]
 
 data_folder: ./processed_data
-output_folder: !ref ./results/la_fabnk_xvt_clamp_gauss/<seed>
+output_folder: !ref ./results/la_fabnk/<seed>
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
 
@@ -26,7 +26,7 @@ ckpt_interval_minutes: 15 # save checkpoint every N min
 # Feature parameters
 n_mels: 40
 embedding_incha: 40
-embedding_features: [tdfbanks]
+embedding_features: [fbanks]
 
 
 # Training Parameters
@@ -68,12 +68,12 @@ augmentation: !new:speechbrain.lobes.augment.TimeDomainSpecAugment
 # ----- Option starts -----
 
 
-# fbanks: !new:speechbrain.lobes.features.Fbank
-#     n_mels: !ref <n_mels>
-#     sample_rate: 16000
-#     n_fft: 400
-#     requires_grad: True
-#     filter_shape: 'gaussian'
+fbanks: !new:speechbrain.lobes.features.Fbank
+    n_mels: !ref <n_mels>
+    sample_rate: 16000
+    n_fft: 400
+    # requires_grad: True
+    # filter_shape: 'gaussian'
 
 
 
@@ -102,11 +102,11 @@ augmentation: !new:speechbrain.lobes.augment.TimeDomainSpecAugment
 #    learn_filters: True
 #    n_filters: !ref <n_mels>
 
-tdfbanks: !new:models.custom_model.TDFbanks
-   nfilters: !ref <n_mels>
-   samplerate: 16000
-   nfft: 512
-   mode: 'Learn-filterbank'
+# tdfbanks: !new:models.custom_model.TDFbanks
+#    nfilters: !ref <n_mels>
+#    samplerate: 16000
+#    nfft: 512
+#    mode: 'Learn-filterbank'
 
 
 #mfcc: !new:speechbrain.lobes.features.MFCC
@@ -176,14 +176,14 @@ modules:
 #    mfcc: !ref <mfcc>
 #    cqt: !ref <cqt>
 #    mag: !ref <mag>
-    # fbanks: !ref <fbanks>
+    fbanks: !ref <fbanks>
 #    pcen: !ref <pcen>
     # leaf: !ref <leaf>
 #    mcqt: !ref <mcqt>
 #    sincnet: !ref <sincnet>
 #    insf: !ref <insf>
 #    trainable_fbanks: !ref <trainable_fbanks>
-    tdfbanks: !ref <tdfbanks>
+    # tdfbanks: !ref <tdfbanks>
 
     env_corrupt: !ref <env_corrupt>
     augmentation: !ref <augmentation>
@@ -227,7 +227,7 @@ checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
     checkpoints_dir: !ref <save_folder>
     recoverables:
         # leaf: !ref <leaf>
-        tdfbanks: !ref <tdfbanks>
+        # tdfbanks: !ref <tdfbanks>
         # fbanks: !ref <fbanks>
 #        trainable_fbanks: !ref <trainable_fbanks>
         embedding_model: !ref <embedding_model>

@@ -7,16 +7,10 @@ from tqdm.contrib import tqdm
 import os
 import pandas as pd
 import wandb
-import matplotlib.pyplot as plt
 import numpy as np
 import json
-from PIL import Image
-import torch.nn.functional as F
 import losses.eval_metrics as em
-from speechbrain.dataio.dataloader import SaveableDataLoader
-import soundfile as sf
-import wavio
-from torchvision import transforms
+
 
 class SpoofSpeechClassifier(sb.Brain):
     def compute_forward(self, batch, stage):

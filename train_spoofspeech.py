@@ -1,18 +1,13 @@
 import os
 import sys
-import torch
 import speechbrain as sb
 from hyperpyyaml import load_hyperpyyaml
 from models.SpoofSpeechClassifier import SpoofSpeechClassifier
 from datasets.SpoofSpeechDataset import get_dataset
-from datasets.PaddedBatch import PaddedBatch
 import wandb
-import torchvision.models as models
-import torch
-from ptflops import get_model_complexity_info
 
 if __name__ == "__main__":
-    TRAIN =False
+    TRAIN =True
 
     if TRAIN:
         wandb.init(project='asv')
