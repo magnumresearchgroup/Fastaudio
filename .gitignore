@@ -127,9 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
 processed_data/
-prediction/RIRS_NOISES/
+processed_data/RIRS_NOISES/
+prediction/
 results/
 *.ckpt
 
