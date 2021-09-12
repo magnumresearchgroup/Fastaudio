@@ -1,0 +1,6 @@
+[submodule "leaf-audio-pytorch"]
+	path = leaf-audio-pytorch
+	url = https://github.com/denfed/leaf-audio-pytorch.git
+[submodule "tdfbank"]
+	path = tdfbank
+	url = https://github.com/facebookresearch/tdfbanks.git
