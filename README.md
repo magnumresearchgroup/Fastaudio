@@ -35,10 +35,19 @@
 
 ### Train
 1. ``python3.8 train_spoofspeech.py yaml/SpoofSpeechClassifier.yaml --data_parallel_backend --data_parallel_count=2``
-2. Modify the `world_size` in `src/model/nl2cmd.yaml` to the number of GPUs you are using and put the ids as `gpu_ranks`.
 
 
 ### Inference
 1. Modify the `TRAIN` in `train_spoofspeech.py` to `False`.
+2. ``python3.8 train_spoofspeech.py yaml/SpoofSpeechClassifier.yaml --data_parallel_backend --data_parallel_count=2``
 
-2. `onmt_translate -model src/model/run/model_step_2000.pt -src src/data/invocations_proccess_test.txt -output pred_2000.txt -gpu 0 -verbose`
+## Reference
+If you use this repository, please consider citing:
+
+```
+@inproceedings{Fu2021FastAudioAL,
+  title={FastAudio: A Learnable Audio Front-End for Spoof Speech Detection},
+  author={Quchen Fu and Zhongwei Teng and Jules White and M. Powell and Douglas C. Schmidt},
+  year={2021}
+}
+```
