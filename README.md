@@ -1,6 +1,6 @@
 # Fastaudio
 
-FastAudio is a Learnable Audio Frontend team Magnum's designed for the **[ASVspoof 2021 challenge]**. The solution was produced by Quchen Fu and Zhongwei Teng, researchers in the **[Magnum Research Group]** at Vanderbilt University. The Magnum Research Group is part of the **[Institute for Software Integrated Systems]**. 
+FastAudio is a **[Learnable Audio Frontend]** team Magnum's designed for the **[ASVspoof 2021 challenge]**. The solution was produced by Quchen Fu and Zhongwei Teng, researchers in the **[Magnum Research Group]** at Vanderbilt University. The Magnum Research Group is part of the **[Institute for Software Integrated Systems]**. 
 
 The ASVspoof 2021 Competition challenges teams to develop countermeasures capable of discriminating between bona fide and spoofed or deepfake speech. The model achieved a 0.2531 min t-DCF score in LA Track on the open **[Leaderboard]**.
 
@@ -52,6 +52,14 @@ If you use this repository, please consider citing:
 @inproceedings{Fu2021FastAudioAL,
   title={FastAudio: A Learnable Audio Front-End for Spoof Speech Detection},
   author={Quchen Fu and Zhongwei Teng and Jules White and M. Powell and Douglas C. Schmidt},
+  year={2021}
+}
+```
+
+```
+@inproceedings{Teng2021ComplementingHF,
+  title={Complementing Handcrafted Features with Raw Waveform Using a Light-weight Auxiliary Model},
+  author={Zhongwei Teng and Quchen Fu and Jules White and M. Powell and Douglas C. Schmidt},
   year={2021}
 }
 ```
