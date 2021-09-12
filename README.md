@@ -1,5 +1,8 @@
-# ASVspoof2021-Fastaudio#
+# ASVspoof2021-Fastaudio
 
+FastAudio is team Magnum's solution for the **[ASVspoof 2021 challenge]**. The solution was produced by Quchen Fu and Zhongwei Teng, researchers in the **[Magnum Research Group]** at Vanderbilt University. The Magnum Research Group is part of the **[Institute for Software Integrated Systems]**. 
+
+The ASVspoof 2021 Competition challenges teams to develop countermeasures capable of discriminating between bona fide and spoofed or deepfake speech. The model achieved a 0.2531 min t-DCF score in LA Track on the open **[Leaderboard]**.
 
 [ASVspoof 2021 challenge]: https://www.asvspoof.org
 [Magnum Research Group]:https://www.magnum.io
