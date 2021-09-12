@@ -129,16 +129,14 @@ dmypy.json
 .pyre/
 
 processed_data/
-prediction/
+prediction/RIRS_NOISES/
 results/
 *.ckpt
 
 logs/*
-
 __pycache__
 *.pyc
 *.DS_Store
-
 .idea/
 wandb/
 *.zip
