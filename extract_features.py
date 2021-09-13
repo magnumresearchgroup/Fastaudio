@@ -1,3 +1,0 @@
-from datasets.extrac_mel_f0 import extract_and_save_mel_f0
-
-extract_and_save_mel_f0()

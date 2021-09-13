@@ -49,9 +49,10 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
     │       └── ASVspoof2019_LA_eval
     │
     └── Fastaudio
-    
+
 1. Download the data [here](https://zenodo.org/record/4837263)
-2. Unzip and save the data to a folder `False` in the same directory as `Fastaudio`
+2. Unzip and save the data to a folder `data` in the same directory as `Fastaudio`
+
 
 ### Train
 1. ``python3.8 train_spoofspeech.py yaml/SpoofSpeechClassifier.yaml --data_parallel_backend --data_parallel_count=2``
