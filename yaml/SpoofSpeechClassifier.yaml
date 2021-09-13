@@ -2,7 +2,7 @@
 __set_seed: !!python/object/apply:torch.manual_seed [!ref <seed>]
 
 data_folder: ./processed_data
-output_folder: !ref ./results/la_fabnk/<seed>
+output_folder: !ref ./results/la_fastaudiogauss/<seed>
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
 
@@ -26,7 +26,7 @@ ckpt_interval_minutes: 15 # save checkpoint every N min
 # Feature parameters
 n_mels: 40
 embedding_incha: 40
-embedding_features: [fbanks]
+embedding_features: [fastaudiogauss]
 
 
 # Training Parameters
@@ -68,13 +68,34 @@ augmentation: !new:speechbrain.lobes.augment.TimeDomainSpecAugment
 # ----- Option starts -----
 
 
-fbanks: !new:speechbrain.lobes.features.Fbank
+# fbanks: !new:speechbrain.lobes.features.Fbank
+#     n_mels: !ref <n_mels>
+#     sample_rate: 16000
+#     n_fft: 400
+#     # requires_grad: True
+#     # filter_shape: 'gaussian'
+
+fastaudiogauss: !new:models.custom_model.FastAudio
     n_mels: !ref <n_mels>
     sample_rate: 16000
     n_fft: 400
-    # requires_grad: True
-    # filter_shape: 'gaussian'
+    requires_grad: True
+    filter_shape: 'gaussian'
 
+fastaudiotri: !new:models.custom_model.FastAudio
+    n_mels: !ref <n_mels>
+    sample_rate: 16000
+    n_fft: 400
+    requires_grad: True
+    filter_shape: 'triangular'
+
+fastaudiosorted: !new:models.custom_model.FastAudio
+    n_mels: !ref <n_mels>
+    sample_rate: 16000
+    n_fft: 400
+    requires_grad: True
+    filter_shape: 'triangular'
+    sort: True
 
 
 #trainable_fbanks: !new:nnAudio.Spectrogram.MelSpectrogram
@@ -174,7 +195,8 @@ modules:
 #    mfcc: !ref <mfcc>
 #    cqt: !ref <cqt>
 #    mag: !ref <mag>
-    fbanks: !ref <fbanks>
+    # fbanks: !ref <fbanks>
+    fastaudiogauss: !ref <fastaudiogauss>
 #    pcen: !ref <pcen>
     # leaf: !ref <leaf>
 #    mcqt: !ref <mcqt>
@@ -228,6 +250,7 @@ checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
         # tdfbanks: !ref <tdfbanks>
         # fbanks: !ref <fbanks>
 #        trainable_fbanks: !ref <trainable_fbanks>
+        fastaudiogauss: !ref <fastaudiogauss>
         embedding_model: !ref <embedding_model>
         classifier: !ref <classifier>
         normalizer: !ref <mean_var_norm>

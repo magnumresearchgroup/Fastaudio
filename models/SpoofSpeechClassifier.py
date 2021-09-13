@@ -61,7 +61,8 @@ class SpoofSpeechClassifier(sb.Brain):
 
         FEATURE_EXTRACTOR = {
             # 'cqt': self.modules.cqt,
-            'fbanks': self.modules.fbanks
+            # 'fbanks': self.modules.fbanks
+            'fastaudiogauss': self.modules.fastaudiogauss
             # 'ifr': self.modules.ifr
             # 'mag': self.modules.mag
             # 'mfcc': self.modules.mfcc
