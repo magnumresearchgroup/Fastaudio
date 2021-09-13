@@ -53,7 +53,8 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 1. Download the data [here](https://zenodo.org/record/4837263)
 2. Unzip and save the data to a folder `data` in the same directory as `Fastaudio`
 3. ``python3.8 preprocess.py``
-
+4. Change ``args['data_type'] = ['labeled','unlabeled'][1]`` in ``preprocess.py`` to ``args['data_type'] = ['labeled','unlabeled'][0]``
+5. ``python3.8 preprocess.py``
 
 ### Train
 1. ``python3.8 train_spoofspeech.py yaml/SpoofSpeechClassifier.yaml --data_parallel_backend --data_parallel_count=2``
