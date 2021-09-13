@@ -34,8 +34,6 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 5. ``pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html``
 
 ### Data pre-processing
-1. Download the data [here](https://zenodo.org/record/4837263)
-2. Unzip and save the data to a folder `False` in the same directory as `Fastaudio`
 
     .
     ├── data                       
@@ -51,6 +49,9 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
     │       └── ASVspoof2019_LA_eval
     │
     └── Fastaudio
+    
+1. Download the data [here](https://zenodo.org/record/4837263)
+2. Unzip and save the data to a folder `False` in the same directory as `Fastaudio`
 
 ### Train
 1. ``python3.8 train_spoofspeech.py yaml/SpoofSpeechClassifier.yaml --data_parallel_backend --data_parallel_count=2``
