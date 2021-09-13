@@ -68,6 +68,12 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 ### Evaluate
 1. ``python3.8 eval.py``
 
+## Metrics
+
+### Accuracy metric
+
+min t−DCF =min{βPcm (s)+Pcm(s)}
+
 ## Reference
 If you use this repository, please consider citing:
 
