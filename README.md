@@ -36,6 +36,7 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 ### Data pre-processing
 1. Download the data [here](https://zenodo.org/record/4837263)
 2. Unzip and save the data to a folder `False` in the same directory as `Fastaudio`
+
     .
     ├── data                       
     │   │
