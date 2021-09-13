@@ -82,16 +82,13 @@ fbanks: !new:speechbrain.lobes.features.Fbank
 #    fmax: 8000
 #    hop_length: 160
 #    htk: True
-##    pad_mode: 'constant'
 #    trainable_mel: True
-##    trainable_STFT: True
 #    n_mels: !ref <n_mels>
 #    n_fft: 400
 #    hop_length: 32 #512/(16000/1000)
 
 #pcen: !new:pcen.StreamingPCENTransform
 #    n_mels: !ref <n_mels>
-##    sample_rate: 16000
 #    n_fft: 512
 #    trainable: True
 
@@ -113,6 +110,7 @@ fbanks: !new:speechbrain.lobes.features.Fbank
 #    n_mels: !ref <n_mels>
 #    sample_rate: 16000
 #
+
 #mag: !new:models.custom_model.mag
 #    sample_rate: 16000
 

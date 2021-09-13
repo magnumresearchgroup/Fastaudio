@@ -1,6 +1,6 @@
 # Fastaudio
 
-FastAudio is a **[Learnable Audio Frontend]** team Magnum's designed for the **[ASVspoof 2021 challenge]**. The solution was produced by Quchen Fu and Zhongwei Teng, researchers in the **[Magnum Research Group]** at Vanderbilt University. The Magnum Research Group is part of the **[Institute for Software Integrated Systems]**. 
+FastAudio is a **[Learnable Audio Frontend]** team Magnum's designed for the **[ASVspoof 2021 challenge]**. It was developed using the **[Speechbrain]** framework. The solution was produced by Quchen Fu and Zhongwei Teng, researchers in the **[Magnum Research Group]** at Vanderbilt University. The Magnum Research Group is part of the **[Institute for Software Integrated Systems]**. 
 
 The ASVspoof 2021 Competition challenges teams to develop countermeasures capable of discriminating between bona fide and spoofed or deepfake speech. The model achieved a 0.2531 min t-DCF score in LA Track on the open **[Leaderboard]**.
 
@@ -9,6 +9,7 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 [Magnum Research Group]:https://www.magnum.io
 [Institute for Software Integrated Systems]:https://www.isis.vanderbilt.edu
 [leaderboard]: https://competitions.codalab.org/competitions/32343#results
+[Speechbrain]: https://github.com/speechbrain/speechbrain.git
 
 ## Requirements
 <details><summary>Show details</summary>
@@ -33,9 +34,22 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 5. ``pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html``
 
 ### Data pre-processing
-<!-- 1. Run `python3 main.py --mode preprocess --data_dir src/data --data_file nl2bash-data.json` and `cd src/model && onmt_build_vocab -config nl2cmd.yaml -n_sample 10347 --src_vocab_threshold 2 --tgt_vocab_threshold 2` to process raw data.
-2. You can also download the Original raw data [here](https://ibm.ent.box.com/v/nl2bash-data) -->
+1. Download the data [here](https://zenodo.org/record/4837263)
+2. Unzip and save the data to a folder `False` in the same directory as `Fastaudio`
+## Directory
 
+    .
+    ├── data                       
+    │   │
+    │   ├── PA                  
+    │   │   └── ...
+    │   └── LA           
+    │       ├── ASVspoof2019_LA_asv_protocols
+    │       ├── ASVspoof2019_LA_asv_scores
+    │       ├── ASVspoof2019_LA_cm_protocols
+    │       └── ASVspoof2019_LA_train
+    │
+    └── Fastaudio
 
 ### Train
 1. ``python3.8 train_spoofspeech.py yaml/SpoofSpeechClassifier.yaml --data_parallel_backend --data_parallel_count=2``
