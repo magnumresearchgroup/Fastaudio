@@ -20,6 +20,7 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 * wandb
 * torch==1.8.0+cu111
 * torchaudio==0.8.0
+* nnAudio==0.2.6
 
 </p>
 </details>
