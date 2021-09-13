@@ -5,7 +5,7 @@ FastAudio is a **[Learnable Audio Frontend]** team Magnum's designed for the **[
 The ASVspoof 2021 Competition challenges teams to develop countermeasures capable of discriminating between bona fide and spoofed or deepfake speech. The model achieved a 0.2531 min t-DCF score in LA Track on the open **[Leaderboard]**.
 
 <p align="left">
-<img width="800" alt="fastaudio-2" src="https://user-images.githubusercontent.com/31392274/133123291-d57519ce-4096-42b4-828e-963c1c7af867.png">
+<img width="850" alt="fastaudio-2" src="https://user-images.githubusercontent.com/31392274/133123291-d57519ce-4096-42b4-828e-963c1c7af867.png">
 </p>
 
 [Learnable Audio Frontend]: https://arxiv.org/abs/2109.02774
