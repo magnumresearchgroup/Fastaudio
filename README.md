@@ -79,6 +79,11 @@ The ASVspoof 2021 Competition challenges teams to develop countermeasures capabl
 
 min t−DCF =min{βPcm (s)+Pcm(s)}
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=magnumresearchgroup/Fastaudio&type=Date)](https://star-history.com/#magnumresearchgroup/Fastaudio&Date)
+
+
 ## Reference
 If you use this repository, please consider citing:
 
